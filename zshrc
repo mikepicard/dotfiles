@@ -60,7 +60,7 @@ proxyoff() {
   echo -e "\nProxy environment variables removed."
 }
 #stuff to avoid starting X
-gethref() { curl -k $1 2>&1 | grep -o -E 'htref="([^"#]+)"' | cut -d'"' -f2 | sort -u; }
+gethref() { curl -k $1 2>&1 | grep -o -E 'href="([^"#]+)"' | cut -d'"' -f2 | sort -u; }
 gettext() { curl -L -A "Mozilla/5.0" -k $1 -s | w3m -dump -T text/html; }
 #i should really just make this a for loop
 colours() {
