@@ -39,7 +39,7 @@ man() {
   LESS_TERMCAP_us=$'\E[04;38;5;146m' \
   man "$@"
 }
-#make sure to edit your sudoers to inherit this env var
+#make sure to edit your sudoers to inherit these env vars
 proxy() {
   export http_proxy="INSERT_PROXY_ADDRESS"
   export https_proxy="$http_proxy"
