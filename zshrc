@@ -11,6 +11,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='mvim'
 fi
+
 #pretty lazy verbosity
 alias ls='ls --color=auto'
 alias grep="grep --color"
@@ -22,12 +23,14 @@ alias cp="cp -v"
 alias mv="mv -v"
 alias fucking="sudo"
 #ssh alias's redacted
-#fatty files
+
+#list bloat
 diskhog() {
   for i in G M K; do
     du -ah | grep [0-9]$i | sort -nr -k 1
   done | head -n 11
 }
+
 #easier to read
 man() {
   env LESS_TERMCAP_mb=$'\E[01;31m' \
@@ -39,6 +42,7 @@ man() {
   LESS_TERMCAP_us=$'\E[04;38;5;146m' \
   man "$@"
 }
+
 #make sure to edit your sudoers to inherit these env vars
 proxy() {
   export http_proxy="INSERT_PROXY_ADDRESS"
@@ -59,9 +63,11 @@ proxyoff() {
   unset rsync_proxy
   echo -e "\nProxy environment variables removed."
 }
+
 #stuff to avoid starting X
 gethref() { curl -k $1 2>&1 | grep -o -E 'href="([^"#]+)"' | cut -d'"' -f2 | sort -u; }
 gettext() { curl -L -A "Mozilla/5.0" -k $1 -s | w3m -dump -T text/html; }
+
 #i should really just make this a for loop
 colours() {
   echo -e '\033[1;37m]=\u2620=[ White,       mirc=0,  bash=\\033[1;37m'
@@ -84,6 +90,7 @@ colours() {
 
 #for extended ansi support
 echo -e "\033(U"
+
 #fix paths
 PATH="/home/REDACTED/perl5/bin${PATH+:}${PATH}"; export PATH;
 PERL5LIB="/home/REDACTED/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
