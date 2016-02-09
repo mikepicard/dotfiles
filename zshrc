@@ -23,6 +23,8 @@ alias cp="cp -v"
 alias mv="mv -v"
 alias fucking="sudo"
 #ssh alias's redacted
+alias proghouse="mplayer -playlist http://hirschmilch.de/prog-house/listen.pls"
+alias dubstep="mplayer -playlist http://dubstep.fm/256.pls"
 
 #list bloat
 diskhog() {
