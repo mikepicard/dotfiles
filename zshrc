@@ -25,6 +25,7 @@ alias fucking="sudo"
 #ssh alias's redacted
 alias proghouse="mplayer -playlist http://hirschmilch.de/prog-house/listen.pls"
 alias dubstep="mplayer -playlist http://dubstep.fm/256.pls"
+alias pubip="IPv4 address: $(curl -k https://blackcatz.org/ip)"
 
 #list bloat
 diskhog() {
