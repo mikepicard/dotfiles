@@ -4,7 +4,8 @@ floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run -nb '#000000' -nf '#00FF00' -sb '#00FF00' -sf '#000000'
+bindsym $mod+d exec dmenu_run -nb '#002B36' -nf '#FFFFFF' -sb '#006ed7' 
+-sf '#002B36'
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
@@ -52,7 +53,9 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit 
+shortcut. Do you really want to exit i3? This will end your X session.' 
+-b 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
@@ -69,21 +72,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-client.focused			#00FF00	#000000		#00FF00	#00FF00
-client.focused_inactive		#00FF00	#000000		#00FF00	#00FF00
-client.unfocused		#00FF00	#000000		#00FF00	#00FF00
-client.urgent			#00FF00	#000000		#00FF00	#00FF00
+client.focused			#FFFFFF	#002B36		#FFFFFF	#FFFFFF
+client.focused_inactive		#FFFFFF	#002B36		#FFFFFF	#FFFFFF
+client.unfocused		#FFFFFF	#002B36		#FFFFFF	#FFFFFF
+client.urgent			#FFFFFF	#002B36		#FFFFFF	#FFFFFF
 
 bar {
         status_command	i3status
 	position	top
 	
 	colors {
-		background		#000000
-		statusline		#00FF00
-		focused_workspace	#00FF00 #000000
-		active_workspace	#00FF00 #000000
-		inactive_workspace	#00FF00 #000000
-		urgent_workspace	#00FF00 #000000
+		background		#002B36
+		statusline		#FFFFFF
+		focused_workspace	#FFFFFF #002B36
+		active_workspace	#FFFFFF #002B36
+		inactive_workspace	#FFFFFF #002B36
+		urgent_workspace	#FFFFFF #002B36
 	}
 }
