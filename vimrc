@@ -36,3 +36,4 @@ set shiftwidth=4
 set softtabstop=4
 
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+autocmd BufEnter * set mouse=
