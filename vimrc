@@ -15,7 +15,6 @@ set number
 set ruler
 set cursorline
 set noerrorbells
-set visualbell
 set nowrap
 set wildmenu
 set wildmode=list:full
@@ -35,6 +34,8 @@ set smartindent
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set visualbell 
+set t_vb=
 
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 autocmd BufEnter * set mouse=
