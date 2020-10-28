@@ -1,3 +1,4 @@
+set term=xterm
 set nocompatible
 set filetype=c
 set fileformats=unix,dos,mac
