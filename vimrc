@@ -6,7 +6,7 @@ set viminfo=
 set shell=bash
 set termencoding=utf-8
 set fileencoding=utf-8
-set pastetoggle=<F3>
+set pastetoggle=<F4>
 
 syntax on
 set background=dark
